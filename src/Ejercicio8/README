@@ -1,0 +1,2 @@
+Ejercicio 8 – Productor / Consumidor con buffer limitado
+Objetivo: dos hilos comparten una cola con capacidad máxima. El productor no puede meter si está llena, el consumidor no puede sacar si está vacía. Se coordinan con synchronized, wait() y notifyAll().

@@ -27,11 +27,11 @@ public class Buffer {
         
     }
     
-    public synchronized void consumir(int valor) throws InterruptedException{
+    public synchronized void consumir() throws InterruptedException{
         while(cola.isEmpty()){
             wait();
         }
-        cola.poll();
+        int valor = cola.poll();
         System.out.println("[CONSUMIDO] " + valor + " -> tamaño " + (cola.size()));
         notifyAll();
         

@@ -19,7 +19,7 @@ public class Productor implements Runnable{
     
     @Override
     public void run(){
-        for (int i=1; i<elementos; i++){
+        for (int i=1; i<=elementos; i++){
             try {
                 buffer.producir(i);
                 Thread.sleep(50);

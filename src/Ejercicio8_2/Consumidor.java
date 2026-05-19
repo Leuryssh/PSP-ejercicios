@@ -21,7 +21,7 @@ public class Consumidor implements Runnable{
     public void run() {
         for(int i =0 ;i<elementos; i++){
             try {
-                buffer.consumir(i);
+                buffer.consumir();
                 Thread.sleep(100);
             } catch (InterruptedException ex) {
                 System.getLogger(Consumidor.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);

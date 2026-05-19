@@ -10,11 +10,16 @@ public class Consumidor implements Runnable{
     //Definir variables
     private Buffer buffer;
     private int elementos;
+
+    public Consumidor(Buffer buffer, int elementos) {
+        this.buffer = buffer;
+        this.elementos = elementos;
+    }
     
     
     @Override
     public void run() {
-        for(int i =0 ;i>elementos; i++){
+        for(int i =0 ;i<elementos; i++){
             try {
                 buffer.consumir(i);
                 Thread.sleep(100);
